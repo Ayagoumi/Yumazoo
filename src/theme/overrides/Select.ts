@@ -64,7 +64,16 @@ export default function Select(theme: Theme) {
     MuiList: {
       styleOverrides: {
         root: {
-          padding: '8px',
+          padding: '8px !important',
+        },
+      },
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&.Mui-focusVisible': {
+            backgroundColor: theme.palette.primary.light,
+          },
         },
       },
     },

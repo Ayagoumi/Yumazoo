@@ -14,16 +14,19 @@ export default function GlobalStyles() {
         },
         html: {
           width: '100%',
-          height: '100%',
+          height: 'auto',
           WebkitOverflowScrolling: 'touch',
         },
         body: {
-          width: '100%',
-          height: '100%',
+          width: '410px',
+          height: 'auto',
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          },
         },
         '#root': {
           width: '100%',
-          height: '100%',
+          height: 'auto',
         },
         input: {
           '&[type=number]': {
