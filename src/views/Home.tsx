@@ -14,6 +14,21 @@ export default function Home() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
+    const intervalId = setInterval(() => {
+      axios
+        .get(`${BASE_URL}/yumazoo/recipes/number`)
+        .then((response) => {
+          dispatch({ type: 'UPDATE_RECIPE_COUNT', payload: response.data.message as number });
+        })
+        .catch(() => {
+          console.error('Failed to fetch recipe count'); // eslint-disable-line no-console
+        });
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
     axios
       .get(`${BASE_URL}/yumazoo/recipes`)
       .then((response) => {
@@ -22,7 +37,7 @@ export default function Home() {
       .catch(() => {
         dispatch({ type: 'FETCH_ERROR' });
       });
-  }, []);
+  }, [state.recipeCount]);
 
   const displayedRecipe = state.selectedRecipe || state.recipes[242];
 

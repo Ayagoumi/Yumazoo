@@ -18,6 +18,7 @@ export type State = {
   error: string;
   recipes: Recipe[];
   selectedRecipe: Recipe | null;
+  recipeCount: number;
 };
 
 export type FetchSuccessAction = {
@@ -34,4 +35,13 @@ export type SelectRecipeAction = {
   payload: Recipe;
 };
 
-export type Action = FetchSuccessAction | FetchErrorAction | SelectRecipeAction;
+export type UpdateRecipeCountAction = {
+  type: 'UPDATE_RECIPE_COUNT';
+  payload: number;
+};
+
+export type Action =
+  | FetchSuccessAction
+  | FetchErrorAction
+  | SelectRecipeAction
+  | UpdateRecipeCountAction;

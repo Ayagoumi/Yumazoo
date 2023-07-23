@@ -5,6 +5,7 @@ export const initialState: State = {
   error: '',
   recipes: [],
   selectedRecipe: null,
+  recipeCount: 0,
 };
 
 const reducer = (state: State, action: Action): State => {
@@ -27,6 +28,11 @@ const reducer = (state: State, action: Action): State => {
       return {
         ...state,
         selectedRecipe: action.payload,
+      };
+    case 'UPDATE_RECIPE_COUNT':
+      return {
+        ...state,
+        recipeCount: action.payload,
       };
     default:
       return state;
