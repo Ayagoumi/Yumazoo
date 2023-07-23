@@ -1,25 +1,17 @@
 {
-  "short_name": "Yumazoo",
-  "name": "Yumazoo",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "name": "Enter your extension name here",
+  "description": "Enter your extension description here",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "author": "<author_name>",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "host_permissions": ["https://master-7rqtwti-yj2le3kr2yhmu.uk-1.platformsh.site/*"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": []
 }
