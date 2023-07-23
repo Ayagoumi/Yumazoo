@@ -8,7 +8,6 @@
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll.eslint"],
-  // Multiple language settings for json and jsonc files
   "[json][jsonc][yaml]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -20,5 +19,5 @@
   },
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
-  } // Don't run prettier for files listed in .gitignore
+  }
 }
