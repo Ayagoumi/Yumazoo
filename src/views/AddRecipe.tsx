@@ -44,9 +44,9 @@ const validationSchema = Yup.object().shape({
     .trim()
     .required('Description is required')
     .test('hasScript', 'Value must not contain JavaScript', (value) => !hasScript(value)),
-  difficulty: Yup.string()
-    .required('Difficulty is required')
-    .test('hasScript', 'Value must not contain JavaScript', (value) => !hasScript(value)),
+  difficulty: Yup.string().test('hasScript', 'Value must not contain JavaScript', (value) =>
+    value ? !hasScript(value) : false,
+  ),
   protein: Yup.string()
     .trim()
     .required('Protein is required')
@@ -64,7 +64,7 @@ const validationSchema = Yup.object().shape({
     .required('Cooking Oil is required')
     .test('hasScript', 'Value must not contain JavaScript', (value) => !hasScript(value)),
   volume: Yup.number().required('Volume is required').integer().positive(),
-  serves: Yup.number().required('Serves is required').integer().positive(),
+  serves: Yup.number().integer().positive(),
   authenticity: Yup.string()
     .trim()
     .required('Authenticity is required')
