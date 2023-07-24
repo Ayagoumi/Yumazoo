@@ -2,6 +2,10 @@
 
 This project is a Chrome extension to provide awesome features to enhance your experience.
 
+## My Observations
+
+Find my observations about the API and UI in [OBSERVATIONS.md](OBSERVATIONS.md).
+
 ## Installation
 
 Follow the steps below to build and load the extension to your Google Chrome.
