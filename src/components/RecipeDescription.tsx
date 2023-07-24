@@ -35,9 +35,13 @@ export default function RecipeDescription({ description, difficulty }: RecipeDes
       >
         <Box sx={{ display: 'flex', gap: '10px', justifyContent: 'center', alignItems: 'center' }}>
           <img src={logo} alt="recipe" width="27px" height="28px"></img>
-          <Typography variant="h5">Difficulty: {HARDNESS_LEVELS[difficulty]}</Typography>
+          <Typography variant="h5" color="#1E202C">
+            Difficulty: {HARDNESS_LEVELS[difficulty]}
+          </Typography>
         </Box>
-        <Typography variant="body1">{description}</Typography>
+        <Typography variant="body1" color="#1E202C">
+          {description}
+        </Typography>
       </Box>
     </Box>
   );
