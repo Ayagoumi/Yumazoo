@@ -1,5 +1,5 @@
 export const HARDNESS_LEVELS = ['Easy', 'Medium', 'Hard'];
-export const HARDNESS_LEVELS_COLOR = ['#17CFC4', '#5694ca', '#41479B'];
+export const HARDNESS_LEVELS_COLOR = ['#5694ca', '#17CFC4', '#41479B'];
 
 export const AUTHENTICIY_OPTIONS = ['Verified', 'Unverified'];
 
