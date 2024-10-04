@@ -1,6 +1,6 @@
 # Yumazoo
 
-This project is a Chrome extension to provide awesome features to enhance your experience.
+This project is a Chrome extension that shows recipes from around the world.
 
 ## My Observations
 
